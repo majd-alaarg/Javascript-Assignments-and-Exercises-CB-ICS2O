@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>
+		Leap Year - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="s4.css">
+</head>
+
+<body>
+	<!--Page header starts-->
+	<div class="header-container">
+		<div class="header-title">Leap Year Calculator</div>
+	</div>
+	<!--Page header ends-->
+
+	<!--Main-box containing question input and button starts-->
+	<div class="main-box">
+		<div class="header">Find out if it's a leap year!!</div>
+		<div class="form-box">
+			<input type="number" class="input" id="yearInput" placeholder="Year (ex. 1998)">
+			<!--On click, the code runs the function to determine the leap year-->
+			<button class="btn btn-primary" onclick="myFunction()">Submit</button>
+		</div>
+		<div id="shake_prompt"></div>
+	</div>
+	<!--Main box ends-->
+	
+	<!--The following code is a placeholder for the output which is given by the Javascript program.-->
+	<!--Output box, containing magic output and image starts-->
+	<div id="ball-box">
+		<div id="ball">
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="image_box"><img src="mystery_box.png" class="image"></div>
+		<div class="overlay" id="text">
+			<div class="text" id="message"></div>
+		</div>
+	</div>
+
+	<!--Output box ends-->
+	<script src="s4.js"></script>
+</body></html>

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>
+		Letter Grade Calculator - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="s1.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<!--The following code is for the header of the page-->
+	<div class="header-container">
+		<div class="header-title">Fantastic Letter Grade Calculator</div>
+	</div>
+
+	<!--The following code is for the main box which contains the form input for the user to enter a grade which is retrieved and in the Javascript code under "inputScore" variable and run through several if/else statements.-->
+	<div class="main-box">
+		<div class="header">Please enter a numerical grade between 0-100</div>
+		<div class="form-box"><input type="number" id="gradeInput">
+
+			<!--On click, the code runs the if/else selection program, labelled "myFunction() to determine the corresponding letter grade.-->
+			<button id="button" onclick="myFunction()">Calculate!</button>
+		</div>
+
+		<!--The following code is a placeholder for the output which is given by the Javascript program. The user is then given an outputted letter grade in the "gradeOutput" section.-->
+		<p id="gradeOutput"></p>
+	</div>
+
+	<script src="s1.js"></script>
+</body></html>

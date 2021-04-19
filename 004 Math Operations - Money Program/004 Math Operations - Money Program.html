@@ -1,0 +1,28 @@
+<html>
+
+<head>
+	<title>
+		004 Math Operations - Money Program
+	</title>
+</head>
+
+<body>
+	<H1 style="color: darkblue">004 Math Operations - Money Program</H1>
+	<h4>Majd Al-Aarg</h4>
+	<script>
+		var moneyDeposit, quarterChange, amountLeft1, dimeChange, amountLeft2, nickelChange, amountLeft3, pennyChange;
+		moneyDeposit = prompt("Welcome to Quick Money Change Maker! Please enter a specified amount, in cents, under 1 dollar");
+		quarterChange = Math.floor(moneyDeposit / 25);
+		//amountLeft1 can also be programmed as moneyDeposit%25;
+		amountLeft1 = moneyDeposit - (quarterChange * 25);
+		dimeChange = Math.floor(amountLeft1 / 10);
+		amountLeft2 = amountLeft1 - (dimeChange * 10);
+		nickelChange = Math.floor(amountLeft2 / 5);
+		amountLeft3 = amountLeft2 - (nickelChange * 5);
+		pennyChange = Math.floor(amountLeft3 / 1);
+		document.write("Your entered amount is: " + moneyDeposit + ".<br>");
+		document.write("Your change is " + quarterChange + " quarters, " + dimeChange + " dimes, " + nickelChange + " nickels, and " + pennyChange + " pennies." )
+	</script>
+</body>
+
+</html>

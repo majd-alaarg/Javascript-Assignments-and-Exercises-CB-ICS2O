@@ -1,0 +1,44 @@
+<html>
+
+<head>
+	<title>
+		Zodiac Sign - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="s3.css">
+</head>
+
+<body>
+	<!--Page header starts-->
+	<div class="header-container">
+		<div class="header-title">Zodiac Sign Test</div>
+	</div>
+	<!--Page header ends-->
+
+	<!--Main-box containing date input and button starts-->
+	<div class="main-box">
+		<div class="header">Find out your Zodiac sign now!!</div>
+		<div class="form-box">
+			<input type="text" class="input" id="birthMonth" placeholder="Month (ex. June)">
+			<input type="text" class="input" id="birthDay" placeholder="Day (ex. 6)">
+			<input type="text" class="input" id="birthYear" placeholder="Year (ex. 2000)">
+			<!--On click, the code runs the function that generates a random number assigned to a message/prediction and outputs it -->
+			<button class="btn btn-primary" onclick="myFunction()">Submit</button>
+		</div>
+		<div id="shake_prompt"></div>
+	</div>
+	<!--Main box ends-->
+	
+	<!--The following code is a placeholder for the output which is given by the Javascript program.-->
+	<!--Output box, containing magic output and image starts-->
+	<div class="container">
+		<div id="image_box"><img src="mystery_box.png" class="image"></div>
+		<div class="overlay" id="text">
+			<div class="text" id="message"></div>
+		</div>
+	</div>
+	<!--Output box ends-->
+	
+	<script src="s3.js"></script>
+</body></html>

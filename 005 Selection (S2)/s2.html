@@ -1,0 +1,39 @@
+<html>
+
+<head>
+	<title>
+		Magic 8-Ball - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="s2.css">
+</head>
+
+<body>
+	<!--Page header starts-->
+	<div class="header-container">
+		<div class="header-title">Magic 8-Ball</div>
+	</div>
+	<!--Page header ends-->
+
+	<!--Main-box containing question input and button starts-->
+	<div class="main-box">
+		<div class="header">Ask anything, and you shall receive your fate!</div>
+		<div class="form-box"><input type="text" id="questionInput">
+
+			<!--On click, the code runs the function that generates a random number assigned to a message/prediction and outputs it -->
+			<button class="btn btn-primary" onclick="myFunction()">Predict</button>
+		</div>
+	</div>
+	<!--Main box ends-->
+
+	<!--Ball box, containing magic 8-Ball and output starts-->
+	<div id="ball-box">
+		<div id="ball">
+		<!--The following code is a placeholder for the output which is given by the Javascript program.-->
+			<p id="message"></p>
+		</div>
+	</div>
+	<!--Ball box ends-->
+	<script src="s2.js"></script>
+</body></html>

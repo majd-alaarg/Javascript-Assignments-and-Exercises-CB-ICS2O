@@ -1,0 +1,32 @@
+<html>
+
+<head>
+	<title>
+		003 Variables - Averages
+	</title>
+</head>
+
+<body>
+	<H1 style="color: darkblue">003 Variables - Averages</H1>
+	<h4>Majd Al-Aarg</h4>
+	<script>
+		var grade1, grade2, grade3, grade4, finalAverage;
+		var grade1=prompt("Please enter your first grade:");
+		var grade2=prompt("Please enter your second grade:");
+		var grade3=prompt("Please enter your third grade:");
+		var grade4=prompt("Please enter your fourth grade:");
+		var grade1 = Number(grade1);
+		var grade2 = Number(grade2);
+		var grade3 = Number(grade3);
+		var grade4 = Number(grade4);
+		finalAverage= (grade1+grade2+grade3+grade4)/4;
+		document.write("Your final average is: " + finalAverage);
+		if(finalAverage > 90){
+			document.write("<br>Well done, you qualify for a Silver Medal Award.");
+		} else {
+			document.write("<br>Nice try, good luck next semester.")
+		}
+		
+	</script>
+</body>
+</html>
