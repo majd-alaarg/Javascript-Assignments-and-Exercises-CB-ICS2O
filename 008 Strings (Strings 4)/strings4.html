@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<title>
+		Letter Changer - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="strings4.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<!--The following code is for the header of the page-->
+	<div class="header-container">
+		<div class="header-title">Letter Changer</div>
+	</div>
+
+	<!--The following code is for the main box which contains the form input for the user to enter a word.-->
+	<div class="main-box">
+		<div class="header">Please enter a word</div>
+		<div class="form-box">
+			<input type="text" id="wordInput" placeholder="Enter a word...">
+			<input type="text" id="letterInput" placeholder="Enter a letter...">
+			<button id="button" onclick="myFunction()">Modify</button>
+		</div>
+		<div class="outputs">
+			<p id="inclusionOutput"></p>
+			<p>Your new word is: <span id="wordOutput"></span></p>
+			<p>The random letter picked was: <span id="randomLetterOutput"></span></p>
+		</div>
+		<p id="wordOutput"></p>
+	</div>
+
+	<script src="strings4.js"></script>
+</body></html>

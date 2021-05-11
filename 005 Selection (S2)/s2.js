@@ -7,6 +7,8 @@ function myFunction() {
 	randomNumber = Math.floor(20 * Math.random() + 1);
 
 	//Based on the random number value, it's run through this series of if/else if statements which assign each possible value a Magic 8 Ball standardized response.
+
+	//Instead of the else/if statements, you could use a switch to reduce execution time by mapping possible values of the random number to messages through cases
 	if (randomNumber == 1) {
 		outputMessage = "It is certain.";
 	} else if (randomNumber == 2) {
@@ -45,7 +47,7 @@ function myFunction() {
 		outputMessage = "Outlook not so good.";
 	} else if (randomNumber == 19) {
 		outputMessage = "Signs point to yes.";
-	} else if (randomNumber == 20) {
+	} else {
 		outputMessage = "Very doubtful.";
 	}
 

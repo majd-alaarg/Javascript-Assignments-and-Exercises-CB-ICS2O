@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Josefin+Sans&display=swap');
 
 /*General CSS styling for the page*/
 body {
@@ -21,7 +23,7 @@ body {
 	padding: 25px;
 	color: white;
 	font-family: sans-serif;
-	font-family: 'Lato', sans-serif;
+	font-family: 'RocknRoll One', sans-serif;
 	font-weight: 100;
 	font-size: 200%;
 	text-align: center;
@@ -37,12 +39,12 @@ body {
 	width: 50%;
 	padding: 40px;
 	text-align: center;
-	background-color: #e6ecf3;
-	;
+	background-color: #d6eadf;
 }
 
 .header {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 	font-size: 1.7rem;
 	padding-bottom: 2rem;
 }
@@ -50,7 +52,7 @@ body {
 .form-box input {
 	margin: 0 auto;
 	padding: 5px;
-	width: 20%;
+	width: 20vw;
 	height: 1.8rem;
 	border: dashed 1px;
 	border-radius: 4px;
@@ -62,9 +64,19 @@ button {
 	background: #009090;
 	border: none;
 	color: white;
-	width: 10rem;
+	width: 15vw;
 	border-radius: 5px;
 	transition: all .4s;
+}
+
+@media only screen and (min-width: 1000px) {
+	.form-box input {
+		width: 20%;
+	}
+
+	button {
+		width: 10rem;
+	}
 }
 
 button:hover {
@@ -219,8 +231,8 @@ button:hover {
 /*Styling for output text begins*/
 .text {
 	color: white;
-	font-family: 'Poppins', sans-serif;
-	font-size: 1.9rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5rem;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -231,7 +243,7 @@ button:hover {
 /*Media query adjusts font size*/
 @media only screen and (max-width: 1000px) {
 	.text {
-		font-size: 1rem;
+		font-size: .8rem;
 	}
 }
 

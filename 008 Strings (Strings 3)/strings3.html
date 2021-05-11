@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<title>
+		Locating Substrings - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="strings3.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<!--The following code is for the header of the page-->
+	<div class="header-container">
+		<div class="header-title">Substring Locator</div>
+	</div>
+
+	<!--The following code is for the main box which contains the form input for the user to enter a word.-->
+	<div class="main-box">
+		<div class="header">Please enter a word</div>
+		<div class="form-box">
+			<input type="text" id="wordInput" placeholder="Enter a word...">
+			<input type="text" id="substringInput" placeholder="Enter a substring...">
+			<button id="button" onclick="myFunction()">Calculate</button>
+		</div>
+		<div class="outputs">
+			<p>Number of characters in your word:<span id="characterLengthOutput"></span></p>
+			<p>First index of substring: <span id="firstIndexOutput"></span></p>
+			<p>Last index of substring: <span id="lastIndexOutput"></span></p>
+		</div>
+		<p id="wordOutput"></p>
+	</div>
+
+	<script src="strings3.js"></script>
+</body></html>

@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<title>
+		Rectangle Calculations - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="f4.css">
+</head>
+
+<body>
+	<div class="header-container">
+		<div class="header-title">Rectangle Calculator</div>
+	</div>
+	<form class="main-box">
+		<div class="items">
+			<table>
+				<tr>
+					<td><label for="userLength">Length: </label></td>
+					<td><input type="number" id="userLength" value=20><br></td>
+				</tr>
+				<tr>
+					<td><label for="userLength">Width: </label></td>
+					<td><input type="number" id="userWidth" value=20><br></td>
+				</tr>
+				<tr>
+					<td><label for="userLength">Height: </label></td>
+					<td><input type="number" id="userHeight" value=20></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td class="right"><button type="button" onclick="rectangleArea()">Calculate Area</button></td>
+					<td><button type="button" onclick="rectanglePerimeter()">Calculate Perimeter</button></td>
+				</tr>
+				<tr>
+					<td class="right"><button type="button" onclick="rectangleDiagonal()">Calculate diagonal length</button></td>
+					<td><button type="button" onclick="rectangleVolume()">Calculate volume</button></td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<div class="outputBox">
+				<p class="outputs">The area is: <span id="areaOutput"></span></p>
+				<p class="outputs">The perimeter is: <span id="perimeterOutput"></span></p>
+				<p class="outputs">The diagonal length is: <span id="diagonalOutput"></span></p>
+				<p class="outputs">The volume is: <span id="volumeOutput"></span></p>
+			</div>
+		</div>
+	</form>
+	<script src="f4.js"></script>
+</body></html>

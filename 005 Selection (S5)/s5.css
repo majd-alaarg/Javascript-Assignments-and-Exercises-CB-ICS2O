@@ -6,7 +6,7 @@
 body {
 	background-image: url(https://wallpapercave.com/wp/wp5339483.jpg);
 	background-size: cover;
-	background-repeat: no-repeat;
+
 }
 
 /*Header CSS starts*/
@@ -63,6 +63,12 @@ button {
 	transition: all .4s;
 }
 
+@media only screen and (max-width: 1000px) {
+	button {
+		width: 10rem;
+    margin-top: 10px;
+	}
+}
 /*General input box style ends*/
 
 /*Main button styling begins. The following code, "disappear" is for the first button that pops up*/
@@ -147,15 +153,6 @@ button:hover {
 /*Output message styling ends*/
 
 
-#message {
-	width: 100%;
-	text-align: center;
-	float: bottom;
-}
-
-/*Animation ends*/
-/*Magic box container and zodiac output style ends*/
-
 /*Main container handling output is styled*/
 .container {
 	position: relative;
@@ -178,22 +175,26 @@ button:hover {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	height: 80%;
-	width: 80%;
+	height: 100%;
+	max-width: 90%;
 	opacity: 0;
 	background: #008CBA;
 	transition: 3s ease;
 }
 
 #prizeImage {
-	width: 60%;
-	height: auto;
+	max-width: 90%;
+	max-height: auto;
 }
 
 .prizebox {
+	width: 100%;
+	height: auto;
 	display: flex;
 	justify-content: center;
-	padding-top: 5%;
+	padding-top: 1%;
+	height: auto;
+	max-height: 100%;
 }
 
 /*Prize reveal*/
@@ -218,17 +219,22 @@ button:hover {
 }
 
 /*Styling for output text*/
+#message {
+	width: 100%;
+	text-align: center;
+	bottom: 10;
+}
+
 .text {
 	color: white;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 100;
 	font-size: 200%;
 	position: absolute;
-	top: 50%;
 	left: 50%;
 	transform: translate(-50%, 0%);
 	text-align: center;
-	padding-top: 10%;
+	bottom: 10%;
 }
 
 /*Media query for size adjustments*/
@@ -251,11 +257,9 @@ button:hover {
 }
 
 
-
-/*Magic box container and zodiac output style begins*/
-
+/*Magic box container and prize output style begins*/
 /*The following CSS class is only activated upon the execution of myFunction() which adds a class to the mystery box div. The following code contains the animations.*/
-/*As a part of the Javascript function, on click, the eight ball is assigned an extra class, "shake", which subsequently activates the shaking animation*/
+/*As a part of the Javascript function, on click, the magic box is assigned an extra class, "shake", which subsequently activates the shaking animation*/
 .shake {
 	animation: shake 2s;
 	animation-iteration-count: 1;
@@ -432,3 +436,7 @@ button:hover {
 }
 
 /*Shaking and fade in animation ends*/
+/*Animation ends*/
+/*Magic box container and zodiac output style ends*/
+
+

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+body{
+	background-image: url(https://static.vecteezy.com/system/resources/previews/001/971/650/large_2x/blackboard-inscribed-with-scientific-formulas-and-calculations-free-photo.jpg);
+	background-size: cover;
+	font-family: Lato;
+}
+.header-container {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #124E78;
+	display: inline-block;
+	position: relative;
+}
+
+.header-title {
+	padding: 25px;
+	color: white;
+	font-family: sans-serif;
+	font-family: 'RocknRoll One',sans-serif;
+	font-weight: 100;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+
+.main-box {
+	width: 50%;
+	min-width: 500px;
+	margin-left: 25%;
+	padding: 2% 0;
+	background-color: #d6e5e3;
+	border-radius: 10px;
+}
+
+
+button {
+	padding: 0.5rem 0.3rem;
+	margin-top: 10px;
+	cursor: pointer;
+	background: #009090;
+	border: none;
+	color: white;
+	width: 13rem;
+	border-radius: 5px;
+	transition: all .4s;
+	font-size: 14px;
+	font-family: 'Original Surfer', cursive;
+}
+
+button:hover {
+	background: #24252a;
+}
+
+input {
+	margin: 0 auto;
+	padding: 5px;
+	width: 30%;
+	height: 1.8rem;
+	border: dashed 1px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+@media only screen and (max-width: 600px){
+  .main-box{
+    margin-left: 0;
+  }
+  input{
+    width: 20px;
+  }
+  button{
+    width: 100px;
+  }
+}
+table {
+	margin: 0 auto;
+}
+
+td label {
+	width: 50%;
+}
+
+td input {
+	width: 110%;
+}
+
+.outputBox{
+	text-align: center;
+	width: 35%;
+	margin: 0 auto;
+}

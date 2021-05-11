@@ -1,0 +1,52 @@
+<!--Please go full screen for maximum experience.-->
+
+<html>
+<head>
+	<title>
+		Math Program - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="s6.css">
+</head>
+
+<body>
+	<!--Page header starts-->
+	<div class="header-container">
+		<div class="header-title" id="test">Wonderful Math Games</div>
+	</div>
+	<!--Page header ends-->
+
+	<!--Main-box containing question input and button starts-->
+	<div class="main-box">
+		<div class="header" id="header">Are you ready to do some math?</div>
+		<!--This button toggles the gameStart() function making the initial elements disappear and make a new input box and guess button show up-->
+		<button class="btn btn-primary" id="disappear" onclick="gameStart()">YES I AM!!</button>
+
+		<!--User input box starts-->
+		<div class="form-box" id="appear">
+			<input type="number" id="desired-questions" placeholder="How many questions would you like">
+			<!--On click, the code runs the function that generates the entire game function-->
+			<button class="btn btn-primary" onclick="myFunction()" id="button">Submit</button>
+		</div>
+		<!--User input box ends-->
+
+		<!--The following code is a placeholder for the output which is given by the Javascript program.-->
+		<div id="outputMessage"></div>
+	</div>
+	<!--Main box ends-->
+
+	<!--Output box, containing magic output and image starts-->
+	<div class="container" id="container" >
+		<div id="image_box"><img src="mystery_box.png" class="image"></div>
+		<div class="overlay" id="outputContainer">
+			<div class="prizebox"><img id="prizeImage"></div>
+			<div class="text" id="message"></div>
+		</div>
+	</div>
+	<!--Output box ends-->
+
+	<script src="s6.js"></script>
+</body>
+
+</html>

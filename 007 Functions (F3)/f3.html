@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>
+		Random Math Questions - Majd Al-Aarg
+	</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="f3.css">
+</head>
+
+<body>
+	<!--Page header starts-->
+	<div class="header-container">
+		<div class="header-title">Random Math Questions</div>
+	</div>
+	<!--Page header ends-->
+
+	<!--Main-box containing radius input and button starts-->
+	<div class="main-box">
+		<div class="header">Click the button to receive a random math question!</div>
+		<button class="btn btn-primary" onclick="myFunction()">GENERATE</button>
+		<p id="questionOutput"></p>
+		<form id="userInput">
+			<input type="number" id="userAnswer" placeholder="Answer here...">
+			<button class="btn btn-primary submit" onclick="evaluateUser()">Submit</button>
+		</form>
+	</div>
+	<!--Main box ends-->
+	<script src="f3.js"></script>
+</body></html>

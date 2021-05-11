@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=RocknRoll+One&display=swap');
 
 /*General CSS styling for the page*/
 body {
@@ -21,7 +22,7 @@ body {
 	padding: 25px;
 	color: white;
 	font-family: sans-serif;
-	font-family: 'Lato', sans-serif;
+	font-family: 'RocknRoll One', sans-serif;
 	font-weight: 100;
 	font-size: 200%;
 	text-align: center;
@@ -40,7 +41,8 @@ body {
 }
 
 .header {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 	font-size: 1.7rem;
 	padding-bottom: 2rem;
 }
@@ -56,6 +58,7 @@ body {
 
 button {
 	padding: 0.5rem;
+  margin-top: 10px;
 	cursor: pointer;
 	background: #009090;
 	border: none;
@@ -75,7 +78,6 @@ button:hover {
 	margin: 0 auto;
 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/eb/Magic_eight_ball.png);
 	background-size: 500px;
-	padding-top: 200px;
 	background-repeat: no-repeat;
 	width: 500px;
 	height: 500px;
@@ -87,7 +89,8 @@ button:hover {
 }
 
 #message {
-	padding: 0 200px;
+	padding-top: 220px;
+	padding-left: 200px;
 	width: 100px;
 	text-align: center;
 }

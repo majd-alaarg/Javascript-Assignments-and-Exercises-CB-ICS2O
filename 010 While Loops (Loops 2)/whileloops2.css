@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+body {
+	background-image: url(https://i.pinimg.com/originals/91/c3/67/91c36791df1e8ec0ff5abaae76c1bb9d.jpg);
+	background-size: cover;
+}
+
+/*Header style begins*/
+.header-container {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #2e2d4d;
+	display: inline-block;
+	position: relative;
+}
+
+.header-title {
+	padding: 25px;
+	color: white;
+	font-family: sans-serif;
+	font-family: 'RocknRoll One', sans-serif;
+	font-weight: 100;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*Header style ends*/
+
+/*Main output box style begins*/
+.main-box {
+	margin: 0 auto;
+	border-radius: 6px;
+	width: 50%;
+	padding: 40px;
+	text-align: center;
+	background-color: #7c98b3;
+}
+
+.header {
+	font-family: 'Lemonada', cursive;
+	font-weight: 600;
+	font-size: 2rem;
+	padding-bottom: 2rem;
+}
+
+#output {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 3rem;
+	color: #2e2d4d;
+}
+
+#countOutput{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+input {
+	font-size: 1.1rem;
+	width: 50%;
+	padding: .5rem;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+button {
+	padding: .25rem;
+	font-size: 1rem;
+	margin: 15px;
+	cursor: pointer;
+	background: #34485b;
+	border: none;
+	color: white;
+	width: 13rem;
+	border-radius: 5px;
+	transition: all .4s;
+	font-family: 'Lemonada', cursive;
+}
+
+button:hover {
+	background: #b19206;
+}
+
+/*Main output box style ends*/

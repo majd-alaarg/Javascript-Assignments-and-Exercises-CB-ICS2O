@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap');
+
+body {
+	background-image: url("https://schools.graniteschools.org/westkearns/wp-content/uploads/sites/82/2020/04/Report-Card-Image.jpg");
+}
+
 /*Header style begins*/
 .header-container {
 	width: 100%;
@@ -11,12 +20,13 @@
 	padding: 25px;
 	color: white;
 	font-family: sans-serif;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'RocknRoll One', sans-serif;
 	font-weight: 100;
 	font-size: 200%;
 	text-align: center;
 	vertical-align: middle;
 }
+
 /*Header style ends*/
 
 /*Main output box style begins*/
@@ -26,27 +36,42 @@
 	width: 50%;
 	padding: 40px;
 	text-align: center;
-	background-color: #bababa;
+	background-color: #bbddc9;
 }
 
 .header {
-	font-family: "Poppins", sans-serif;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
 	font-size: 2rem;
 	padding-bottom: 2rem;
 }
 
 #gradeOutput {
-	font-family: "Poppins", sans-serif;
+	font-family: 'Antonio', sans-serif;;
 	font-size: 4rem;
 	color: #2895ad;
 }
 
 #gradeInput {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
+	padding: .2rem;
+	border-radius: 5px;
+	margin-bottom: 10px;
 }
 
 #button {
-	font-size: 1.2rem;
-	outline: 0;
+	padding: 0.5rem;
+	cursor: pointer;
+	background: #009090;
+	border: none;
+	color: white;
+	width: 10rem;
+	border-radius: 5px;
+	transition: all .4s;
 }
+
+#button:hover {
+	background: #24252a;
+}
+
 /*Main output box style ends*/

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="strings1.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="header-container">
+		<h1 id="header">String Functions: Testing</h1>
+	</div>
+	<div class="body">
+		<div class="test">
+			<h2>Substring Function</h2>
+			<input type="text" id="input1" placeholder="enter a sentence">
+			<button onclick="mySubstring()">Substring</button>
+			<div>Your new substring: <div id="output1"></div>
+			</div><br>
+		</div>
+		<div class="test">
+			<h2>Index Function</h2>
+			<input type="text" id="input2" placeholder="enter a sentence">
+			<button onclick="myIndex()">Index of</button>
+			<div id="output2"></div><br>
+		</div>
+		<div class="test">
+			<h2>Last Index Function</h2>
+			<input type="text" id="input3" placeholder="enter a sentence">
+			<button onclick="myLastIndex()">Last Index of</button>
+			<div id="output3"></div><br>
+		</div>
+		<div class="test">
+			<h2>Replace Function</h2>
+			<input type="text" id="input4" placeholder="enter a sentence">
+			<button onclick="myReplace()">Replace</button>
+			<div id="output4"></div><br>
+		</div>
+		<div class="test">
+			<h2>Lowercase Function</h2>
+			<input type="text" id="input5" placeholder="enter a sentence">
+			<button onclick="myLowerCase()">Lower Case</button>
+			<div id="output5"></div><br>
+		</div>
+		<div class="test">
+			<h2>Uppercase Function</h2>
+			<input type="text" id="input6" placeholder="enter a sentence">
+			<button onclick="myUpperCase()">Uppercase</button>
+			<div id="output6"></div><br>
+		</div>
+		<div class="test">
+			<h2>Length Function</h2>
+			<input type="text" id="input7" placeholder="enter a sentence">
+			<button onclick="myLength()">Claculate Length</button>
+			<div id="output7"></div><br>
+		</div>
+		<div class="test">
+			<h2>Include Function</h2>
+			<input type="text" id="input8" placeholder="enter a sentence">
+			<input type="text" id="wordInput8" placeholder="enter a word to search for">
+			<button onclick="myInclude()">Search</button>
+			<div id="output8"></div><br>
+		</div>
+		<div class="test">
+			<h2>Starts With Function</h2>
+			<input type="text" id="input9" placeholder="enter a sentence">
+			<input type="text" id="wordInput9" placeholder="enter a substring to validate">
+			<button onclick="myStartWith()">Starts With</button>
+			<div id="output9"></div><br>
+		</div>
+		<div class="test">
+			<h2>Ends With Function</h2>
+			<input type="text" id="input10" placeholder="enter a sentence">
+			<input type="text" id="wordInput10" placeholder="enter a substring to validate">
+			<button onclick="myEndWith()">Ends With</button>
+			<div id="output10"></div><br>
+		</div>
+		<div class="test">
+			<h2>Char At Function</h2>
+			<input type="text" id="input11" placeholder="enter a sentence">
+			<input type="number" id="numberInput11" placeholder="enter an index">
+			<button onclick="myCharAt()">Find out</button>
+			<div id="output11"></div><br>
+		</div>
+		<div class="test">
+			<h2>Char Code At Function</h2>
+			<input type="text" id="input12" placeholder="enter a sentence">
+			<input type="number" id="numberInput12" placeholder="enter an index">
+			<button onclick="myCharCodeAt()">Find out</button>
+			<div id="output12"></div><br>
+		</div>
+		<div class="test">
+			<h2>Char Code From Integer Function</h2>
+			<input type="number" id="numberInput13" placeholder="Enter an integer from 0-255">
+			<button onclick="myStringFromChar()">"Calculate"</button>
+			<div>The character based on your char code is: <div id="output13"></div>
+			</div><br>
+		</div>
+	</div>
+	<script src="strings1.js"></script>
+</body></html>

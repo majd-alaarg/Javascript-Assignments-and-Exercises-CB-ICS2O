@@ -11,34 +11,87 @@
 
 <body>
 	<!--Page header starts-->
-	<div class="header-container">
-		<div class="header-title">Zodiac Sign Test</div>
-	</div>
-	<!--Page header ends-->
+	<div class="main">
+		<div class="main2">
+			<div class="header-container">
+				<div class="header-title">Zodiac Sign Test</div>
+			</div>
+			<!--Page header ends-->
 
-	<!--Main-box containing date input and button starts-->
-	<div class="main-box">
-		<div class="header">Find out your Zodiac sign now!!</div>
-		<div class="form-box">
-			<input type="text" class="input" id="birthMonth" placeholder="Month (ex. June)">
-			<input type="text" class="input" id="birthDay" placeholder="Day (ex. 6)">
-			<input type="text" class="input" id="birthYear" placeholder="Year (ex. 2000)">
-			<!--On click, the code runs the function that generates a random number assigned to a message/prediction and outputs it -->
-			<button class="btn btn-primary" onclick="myFunction()">Submit</button>
+			<!--Main-box containing date input and button starts-->
+			<div class="main-box">
+				<div class="header">Find out your Zodiac sign now!!</div>
+				<div class="form-box">
+
+					<!--At first, I used html inputs: <input type="text" id="birthMonth" placeholder="Month (ex. June)">-->
+					<select name="choosemonth" id="birthMonth" class="input">
+					<option value="January">January</option>
+					<option value="February">February</option>
+					<option value="March">March</option>
+					<option value="April">April</option>
+					<option value="May">May</option>
+					<option value="June">June</option>
+					<option value="July">July</option>
+					<option value="August">August</option>
+					<option value="September">September</option>
+					<option value="October">October</option>
+					<option value="November">November</option>
+					<option value="December">December</option>
+				</select>
+				<select name="chooseday" id="birthDay" class="input">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+				<input type="text" class="input" id="birthYear" placeholder="Year (YYYY)">
+				<!--On click, the code runs the function that generates a random number assigned to a message/prediction and outputs it -->
+				<button class="btn btn-primary" onclick="myFunction()">Submit</button>
+			</div>
+			<div id="shake_prompt"></div>
 		</div>
-		<div id="shake_prompt"></div>
-	</div>
-	<!--Main box ends-->
-	
-	<!--The following code is a placeholder for the output which is given by the Javascript program.-->
-	<!--Output box, containing magic output and image starts-->
-	<div class="container">
-		<div id="image_box"><img src="mystery_box.png" class="image"></div>
-		<div class="overlay" id="text">
-			<div class="text" id="message"></div>
+		<!--Main box ends-->
+
+		<!--The following code is a placeholder for the output which is given by the Javascript program.-->
+		<!--Output box, containing magic output and image starts-->
+		<div class="container">
+			<div id="image_box"><img src="mystery_box.png" class="image"></div>
+			<div class="overlay" id="text">
+				<div class="text" id="message"></div>
+			</div>
 		</div>
+    </div>
 	</div>
 	<!--Output box ends-->
-	
+	<div class="zodiacImgBox" id="zodiacImgBox">
+		<img id="zodiacImg">
+	</div>
 	<script src="s3.js"></script>
 </body></html>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+body {
+	background-image: url("https://c4.wallpaperflare.com/wallpaper/83/486/324/letters-words-text-motivation-wallpaper-preview.jpg");
+	background-size: cover;
+}
+
+/*Header style begins*/
+.header-container {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #2b303a;
+	display: inline-block;
+	position: relative;
+}
+
+.header-title {
+	padding: 25px;
+	color: white;
+	font-family: sans-serif;
+	font-family: 'RocknRoll One', sans-serif;
+	font-weight: 100;
+	font-size: 200%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*Header style ends*/
+
+/*Main output box style begins*/
+.main-box {
+	margin: 0 auto;
+	border-radius: 6px;
+	width: 50%;
+	padding: 40px;
+	text-align: center;
+	background-color: #d0bbb3;
+}
+
+.header {
+	font-family: 'Lemonada', cursive;
+	font-weight: 600;
+	font-size: 2rem;
+	padding-bottom: 2rem;
+}
+
+#output {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 3rem;
+	color: #086375;
+}
+
+input {
+	font-size: 1.1rem;
+	padding: .5rem;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	width: 50%;
+}
+
+button {
+	padding: 0.5rem;
+	cursor: pointer;
+	background: #009090;
+	border: none;
+	color: white;
+	width: 10rem;
+	border-radius: 5px;
+	transition: all .4s;
+	font-family: 'Lemonada', cursive;
+}
+
+button:hover {
+	background: #24252a;
+}
+
+/*Main output box style ends*/
