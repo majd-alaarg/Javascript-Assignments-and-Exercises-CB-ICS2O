@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!--Created by Majd Al-Aarg on May 18, 2021-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<script src="script.js"></script>
+
+	<h1>Social Insurance Number System</h1>
+	<h4>Part 1: </h4>
+	<p> Province codes are: [NS, NB, NL, PE, QC, ON, MB, SK, AB, BC, YT, NT, NU]</p>
+	Enter first 4 digits of the SIN: <input id="userSin" placeholder="Please enter a valid 4-digit SIN" style="width: 200px">
+	<br>
+	Enter 2 characters of Province of Birth: <input id="province" placeholder="Type the province code" maxlength="2">
+	<br><br>
+	<button onclick="validate()">Validate and Create SIN</button><br><br>
+	<br>
+	<br>
+	<hr>
+	<br>
+	<h4>Part 2: </h4>
+	Enter SIN: <input id="userSin2" value="423456772" maxlength="9">
+	<br>
+	<br>
+	Enter 2 characters of Province of Birth: <input id="province2" placeholder="Type the province code" maxlength="2">
+	<br>
+	<br><br>
+	<button onclick="part2()">Validate SIN(s)</button>
+
+
+
+
+</body></html>
