@@ -1,0 +1,12 @@
+#pageTitle, .pageDescription {
+    text-decoration: underline #B4C5E4;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.pageButton {
+    border-color: #B4C5E4;
+}
+h1, h2, button {
+  color: #090C9B;
+}

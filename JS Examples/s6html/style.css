@@ -1,0 +1,14 @@
+* {
+  background-color: #B4CDED;
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  color: #0D1821;
+}
+a {
+  color: #0D1821;
+}
+#message  {
+  font-weight: bold;
+  font-size: 18px;
+}

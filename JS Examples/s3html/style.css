@@ -1,0 +1,13 @@
+#zodiacPic {
+  width: 100%;
+}
+body{
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  color: #0B7189;
+}
+.box {
+  height: 300px;
+  margin-top: 5px;
+  background-color: #2F2440;
+}

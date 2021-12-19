@@ -1,0 +1,203 @@
+<html>
+
+<head>
+</head>
+
+<body>
+	<script>
+		// By Allison 
+
+		function gradeCalculations() {
+			var iString = document.getElementById('string').value.toUpperCase(); // getting value of string input
+
+			for (var i = 0; i < iString.length; i++) { // if the character is invalid, replace with an underscore
+				if (iString.charAt(i) != "A" &&
+					iString.charAt(i) != "B" &&
+					iString.charAt(i) != "C" &&
+					iString.charAt(i) != "F") {
+					iString = iString.replace(iString.charAt(i), "_");
+				}
+			}
+
+			var string = iString.replaceAll("_", ""); // for new string variable, remove all underscores by replacing with nothing
+
+			var validGrades = string.length; // number of valid grades is the length of the string
+
+			var letterArray = string.split(''); // creating an array with each character
+			var numberArray = new Array(string.length); // for percentage values
+			var modeArray = new Array(4); // to keep tally of how many of each grade there is
+			var mode, mean, median; // actual values
+			var iMode, iMean, iMedian; // input values
+			var a, b, c, f;
+			a = b = c = f = 0; // counter values for each grade
+			var sum = 0;
+
+			for (var i = 0; i < string.length; i++) {
+
+				// assembling new array with percentage values instead of letters and keeping track of the occurences of each grade
+				switch (letterArray[i]) {
+					case "A":
+						numberArray[i] = 90;
+						a++;
+						break;
+
+					case "B":
+						numberArray[i] = 80;
+						b++;
+						break;
+
+					case "C":
+						numberArray[i] = 70;
+						c++;
+						break;
+
+					case "F":
+						numberArray[i] = 50;
+						f++;
+						break;
+				}
+
+				sum += numberArray[i]; // calculating the sum by adding each value
+			}
+
+			mean = sum / string.length; // calculating mean
+
+			modeArray = [a, b, c, f];
+			var modeNum = Math.max(...modeArray); // finding the max of the array, which represents how many times the mode letter appears 
+
+			mode = "";
+			switch (modeNum) { // seeing which index number the mode appears at, then translating that into a letter grade. If more than one, list all
+				case modeArray[0]:
+					mode += "A, ";
+					break;
+			}
+
+			switch (modeNum) {
+				case modeArray[1]:
+					mode += "B, ";
+					break;
+			}
+
+			switch (modeNum) {
+				case modeArray[2]:
+					mode += "C, ";
+					break;
+			}
+
+			switch (modeNum) {
+				case modeArray[3]:
+					mode += "F, ";
+					break;
+			}
+
+			mode = mode.substring(0, mode.length - 2); // removing extra space and comma at the end of the mode
+
+			var sortedLetterArray = letterArray.sort(); // sorting the letters and numbers
+			var sortedNumberArray = numberArray.sort();
+
+			if (sortedNumberArray.length % 2 == 0) { // if there's an even number of elements, take the two middle ones and divide by 2 for the median
+				var num1 = sortedNumberArray[sortedNumberArray.length / 2 - 1];
+				var num2 = sortedNumberArray[sortedNumberArray.length / 2];
+				median = (num1 + num2) / 2;
+			} else {
+				median = sortedNumberArray[Math.floor(sortedNumberArray.length / 2)]; // else find the index of the middle value
+			}
+
+			// part 2 - verifying inputs and displaying answers
+
+			// displaying correct answers
+			document.getElementById('answers').innerHTML = "You entered " + validGrades + " valid grades<br>The mean: " + mean + "<br>The median: " + median + "<br>The mode: " + mode;
+
+			// getting input values for mean, median and mode
+			iMean = Number(document.getElementById('mean').value);
+			iMedian = Number(document.getElementById('median').value);
+			iMode = document.getElementById('mode').value.toUpperCase();
+
+			// comparing the inputs of mean median and mode to what is returned from the error margin function to determine if they were within the range
+			if (iMean >= lowError(mean) && iMean <= highError(mean)) {
+				iMean = "Correct";
+			} else {
+				iMean = "Incorrect";
+			}
+
+			if (iMedian >= lowError(median) && iMedian <= highError(median)) {
+				iMedian = "Correct";
+			} else {
+				iMedian = "Incorrect";
+			}
+
+			if (iMode == mode) {
+				iMode = "Correct";
+			} else {
+				iMode = "Incorrect";
+			}
+
+			// displaying whether or not input was correct
+			document.getElementById('check').innerHTML = "<h4>Your answers:</h4>The mean: " + iMean + "<br>The median: " + iMedian + "<br>The mode: " + iMode;
+
+			// making a table of grade distribution using the occurences of each grade and dividing by the number of grades to calculate the percentage
+
+			document.getElementById('a').innerHTML = a;
+			document.getElementById('calc1').innerHTML = a / string.length * 100 + "%";
+			document.getElementById('b').innerHTML = b;
+			document.getElementById('calc2').innerHTML = b / string.length * 100 + "%";
+			document.getElementById('c').innerHTML = c;
+			document.getElementById('calc3').innerHTML = c / string.length * 100 + "%";
+			document.getElementById('f').innerHTML = f;
+			document.getElementById('calc4').innerHTML = f / string.length * 100 + "%";
+
+		}
+
+		// functions to calculate error margins
+		function highError(value) {
+			return value * 1.02;
+		}
+
+		function lowError(value) {
+			return value * 0.98;
+		}
+
+	</script>
+	<h1>Grade Verification</h1>
+	Enter a string of Grades:<br>
+	<input type="text" id="string"></input><br>
+	Enter Mean:<br>
+	<input type="text" id="mean"></input><br>
+	Enter Median:<br>
+	<input type="text" id="median"></input><br>
+	Enter Mode:<br>
+	<input type="text" id="mode"></input><br><br>
+	<button onclick="gradeCalculations()">Calculate</button>
+	<p id="answers"></p>
+	<br>
+	<p id="check"></p>
+	<table>
+		<tr>
+			<th>Grade</th>
+			<th>Count</th>
+			<th>Percentage</th>
+		</tr>
+		<tr>
+			<td>A</td>
+			<td id="a"></td>
+			<td id="calc1"></td>
+		</tr>
+		<tr>
+			<td>B</td>
+			<td id="b"></td>
+			<td id="calc2"></td>
+		</tr>
+		<tr>
+			<td>C</td>
+			<td id="c"></td>
+			<td id="calc3"></td>
+		</tr>
+		<tr>
+			<td>F</td>
+			<td id="f"></td>
+			<td id="calc4"></td>
+		</tr>
+	</table>
+</body>
+
+</html>

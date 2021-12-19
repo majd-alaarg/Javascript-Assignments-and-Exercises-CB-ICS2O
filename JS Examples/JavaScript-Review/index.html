@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JavaScript Review 1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <center><h1>JavaScript Review</h1></center>
+      <table border=1>
+        <tr>
+          <th> Topic </th>
+          <th> Notes </th>
+          <th> Knowledge Review</th>
+        </tr>
+        <tr>
+          <td>1. Introduction to JavaScript</td>
+          <td><ul>JavaScript is a programming language that is used to create interactive elements, like buttons that perform taks, pop-ups that take inputs, and even animations and games.</ul></td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>2. Basic Output</td>
+          <td>
+            <ul>alert() - A built-in JavaScript function that displays pop-ups when executed. Message is writen in the brackets of the alert function with quotations</ul>
+            <ul>Example = alert("Ez pez lemon squeezy XD");</ul>
+            <br>
+            <br>
+            <ul>document.write() - Another built-in JavaScript function that allows you to write directly to a web page, where document refers to the webpage itself and .write() is the function we call. Yet again the brackets are usd to provide a message to be displayed in quotations.</ul>
+            <ul> Example = document.write("I am text."); </ul>
+            <br>
+            <br>
+            <ul>console.log() - Another built-in JavaScript function that outputs information to the web developer console. Sometimes programmers will use
+            this while they are trying to debug programs, but a typical web-user will not see these messages.</ul>
+            <ul> Example = console.log("Hello Log.")
+          </td>
+          <td>
+            <img src="2KC.png">
+          </td>
+        </tr>
+        <tr>
+          <td>3. Variables</td>
+          <td>
+            <ul>A variable is a named memory allocation that stores a value.</ul>
+            <ul>Four main types of data:
+              <table border=1px>
+                <tr>
+                  <th>Type</th>
+                  <th>Used to Represent</th>
+                </tr>
+                <tr>
+                  <td>Number</td>
+                  <td>Stores both integer and floating point(decimal) numbers.</td>
+                </tr>
+                <tr>
+                  <td>String</td>
+                  <td>Stores one or more characters in a sequence.</td>
+                </tr>
+                <tr>
+                  <td>Boolean</td>
+                  <td>Stores a value of true or false.</td>
+                </tr>
+                <tr>
+                  <td>Object</td>
+                  <td>A more complex data type that contians a collection of properties.</td>
+                </tr>
+              </table>
+            </ul>
+            <ul>A variable should be declared with a <b>var</b> statement that includes the <b>identifier</b>.</ul>
+            <ul> Identifier Example - var result = 5; "result" is the identifier and the value of 5 is stored within the computer's memory</ul>
+            <ul> Multiple definition statements can be put on the same line. Ex: var result, myName, myAge; </ul>
+            <ul> A constant is a named memory location which stores a value that cannot be changed at run time from its initial assignment.</ul>
+            <ul> Constant Example = const PI = 3.14159; </ul>
+            <br>
+            <br>
+            <ul><b>Choosing Identifiers</b></ul>
+            <ul>All JavaScript variables must be identified with unique names. These unique names are called identifiers. Here are the general rules for ocnstructing names for variables: 
+              <br>
+              <ol>Names can contian letters, digits, underscores, and dollar signs (no other special characters).</ol>
+              <ol>Names must begin with a letter</ol>
+              <ol>Names can also begin with $ and _ (but let's not, for now)</ol>
+              <ol>Names are case sensitive (y and Y are different variables)</ol>
+              <ol>Key words such as var, const, console, log cannot be used as names</ol>
+            </ul>
+            <ul> As a matter of good programming style variables should be written in camelCase and constants should be written in with capitalized letters. </ul>
+            <ul> Variables = myNum, firstName, areaRectangle; Constants = PI, FIRSTNAME, LASTNAME; </ul>
+            <br>
+            <ul><b>Getting User Data</b></ul>
+            <ul>To receive data from users, a prompt would be a good way of doing this: A prompt would look like this: variableIdentifier = prompt("Message:"); </ul>
+            <ul>If the program expects a numerical value for a certain variable, yet the user inputs a string of letters - the calculations will result in a NaN(Not a Number).</ul>
+            <br>
+            <ul><b>Converting Between Data Types</b></ul>
+            <ul>JS chooses the data type for when you first assign a value, hence errors can result in wrong data types such as numbers being assumed as strings</ul>
+            <ul>The way that this can be accomplished is through the numbers and string conversion method: 
+              <ol>var num1 = Number(num1); // this will make the variable of num1 into a number value</ol>
+              <ol>var str1 = String(str1);// this will make the variable of str1 into a string value</ol>
+            </ul>
+          </td>
+          <td>
+            <img src="3KC.png">
+          </td>
+        </tr>
+        <tr>
+          <td>4. Math Operations</td>
+          <td>
+            <table border=1>
+              <tr>
+                <td><center><b>Symbol</b></center></td>
+                <td><center><b>Operation</b></center></td>
+                <td><center><b>Example</b></cente></td>
+                </tr>
+                <tr>
+                  <td><center>+</center></td>
+                  <td><center>Addition</center></td>
+                  <td><center>result = a + b; (result will now store the <b>sum</b> of the values of a and b)</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>-</center></td>
+                  <td><center>Substraction</center></td>
+                  <td><center>result = a - b; (result will now store the <b>difference</b> of the values of a and b)</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>*</center></td>
+                  <td><center>Multiplication</center></td>
+                  <td><center>result = a * b; (result will now store the <b>product</b> of the values of a and b)</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>/</center></td>
+                  <td><center>Division</center></td>
+                  <td><center>result = a / b; (result will now store the <b>quotient</b> of the values of a and b)</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>%</center></td>
+                  <td><center>Modulus</center></td>
+                  <td><center>result = a % b; (result will now store the <b>remainder</b> of a divided by b)</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>**</center></td>
+                  <td><center>Exponentiation</center></td>
+                  <td><center>result = a ** b; (result will now store a to the <b>power</b> of b)</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>++</center></td>
+                  <td><center>Increment</center></td>
+                  <td><center>b++; (the value of b will increase by 1); equivalent to b=b+1</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>--</center></td>
+                  <td><center>Decrement</center></td>
+                  <td><center>b--; (the value of b will decrease by 1); equivalent to b=b-1</center></td>
+                  </tr>
+              </table>
+              <table border=1>
+                <tr>
+                  <td><center><b>Constant or Function</b></center></td>
+                  <td><center><b>Purpose</b></center></td>
+                  <td><center><b>Example</b></center></td>
+                  </tr>
+                  <tr>
+                  <td><center>Math.PI</center></td>
+                  <td><center>Gives you the value of PI</center></td>
+                  <td><center>Returns the value 3.14159265...</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>Math.round()</center></td>
+                  <td><center>Rounds a number to the nearest whole number</center></td>
+                  <td><center>Math.round(5.6) returns 6</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>Math.pow()</center></td>
+                  <td><center>Calculates a power</center></td>
+                  <td><center>Math.pow(3,2) returns 4</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>Math.sqrt()</center></td>
+                  <td><center>Calculates a square root</center></td>
+                  <td><center>Math.sqrt(16)returns 4</center></td>
+                  </tr>
+                   <tr>
+                  <td><center>Math.ceil<br>Math.floor()</center></td>
+                  <td><center>Math.ceil() rounds the number up <br>Math.floor() rounds the number down</center></td>
+                  <td><center>Math.ceil(5.8) returns 6<br>Math.floor(5.8) returns 5</center></td>
+                  </tr>
+                  <tr>
+                  <td><center>Math.random()</center></td>
+                  <td><center>Calculates a random number between 0 and
+                  less than 1. Can be used to make any range
+                  of random numbers.</center></td>
+                  <td><center>Math.random() generates a random between 0-1 (decimals included)</center></td>
+                  </tr>
+                </table>
+                <p>How to generate a random integer from 1-10:<br>
+                <b>Math.floor(10*Math.random()+1)</b></p>
+            </td>
+            <td>
+              <img src="4KC.png">
+            </td>
+        </tr>          
+        <tr>
+          <td>5. Selection</td>
+          <td>
+            <ul><b>The If/Else Statement</b></ul>
+            <ul>Decisions in programs are often made through the selection program of if/else statements. It controls whether if a condition is evaluated between either true or false, it will complete the assigned statements.</ul>
+            <ul> The general form of the if/else statement takes the form of: 
+              <ol> if (boolean condition) {
+                    statements to be executed;
+              }
+              </ol>
+            </ul>
+            <ul> Comparisons are made using operators to check a condition: 
+                <table border=1>
+                  <tr>
+                    <th>Operator</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                  </tr>
+                  <tr>
+                    <td>==</td>
+                    <td>a==b</td>
+                    <td>True if a is equal to b and false otherwise</td>
+                  </tr>
+                  <tr>
+                    <td>===</td>
+                    <td>a===b</td>
+                    <td>True if a has an equal value and equal type to b and false otherwise</td>
+                  </tr>
+                  <tr>
+                    <td>!=</td>
+                    <td>a!=b</td>
+                    <td>True if a is NOT equal to b and false otherwise</td>
+                  </tr>
+                  <tr>
+                    <td><</td>
+                    <td>a < b</td>
+                    <td>True if a is less than b</td>
+                  </tr>
+                  <tr>
+                    <td><=</td>
+                    <td>a <= b</td>
+                    <td>True if a is less than or equal to b</td>
+                  </tr>
+                  <tr>
+                    <td>></td>
+                    <td>a > b</td>
+                    <td>True if a is greater than b</td>
+                  </tr>
+                  <tr>
+                    <td>>=</td>
+                    <td>a >= b</td>
+                    <td>True if a is less than or equal to b</td>
+                  </tr>
+                </table>
+              </ul>
+              <ul>
+                if(condition) {
+                  block of code to be executed if the condition is true
+                } else {
+                  block of code to be executed if the condition is false
+                }
+              </ul>
+              <ul>
+                var age = prompt("Enter your age:");
+                if (age<18) {
+                  <br>
+                        greeting = "Hello young one";
+                  <br>
+                } else {
+                  <br>
+                  	    greeting = "Ready to vote?"
+                  <br>
+                }
+                <br>
+              </ul>
+              <ul><b>Nested If/Else Statements</b></ul>
+              <ul> If the if/else statement has more than two choices a nested else if statmeent is needed with the "else if" statement</ul>
+              <br>
+              <ul><b>Logical Operators: And, Or, Not</b></ul>
+              <ul>
+                <table border=1>
+                  <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                  <tr>
+                    <td> && </td>
+                    <td> and </td>
+                    <td> (x < 10 && y > 1), valid values for this condition are x have to be less than 10 and y has to be greater than 1</td>
+                  </tr>
+                  <tr>
+                    <td> || </td>
+                    <td> or </td>
+                    <td> (x == 5 || y == 5), valid values for this condition are that either x has to equal 5 or y has to equal to 5</td>
+                  </tr>
+                  <tr>
+                    <td> ! </td>
+                    <td> not </td>
+                    <td> !(x == y), valid values for this condition are that x can not equal y</td>
+                  </tr>
+                </table>
+              </ul>
+          </td>
+          <td>
+            <img src="5KCpt1.png">
+            <img src="5KCpt2.png">
+          </td>
+        </tr>
+        <tr>
+          <td>6. JavaScript Review #1</td>
+          <td>
+            <ul>1. Indicate the output of: var y, z; y=2; z=3;
+                  <br> document.write(y +" + "+z+" is "+y+z);
+                  <br> document.write(y+" + "+z+" is "+(y+z));
+                  <br>
+                  <ol class="answer"> The outputs of said code would be: 2 + 3 is 232 + 3 is 5</ol>
+            </ul>
+            <ul>2. What is the difference between a variable and a constant? Give an example of how you would define one of each in JS. 
+              <ol class="answer">A variable can change throughout the program, whereas a constant is defined as value that remains the same throughout the program:
+                <br>var myVaraible;
+                <br>const MYCONST = "5";
+              </ol>
+            </ul>
+            <ul>3. What is the difference between the data type Number and String? Give an example of each. 
+              <ol class="answer"> Number store numbers - integers or real 
+                <br> var x = 5;
+                <br>String stores any combiantion fo characters (including numbers)
+                <br>var x = "5";
+              </ol>
+            </ul>
+            <ul>4. Indicate an appropriate variable name and write a definition statement with an appropriate value for each variable: 
+              <ol class="answer">a. A person's name: var name = "Mickey"; 
+                <br>b. A person's social insurance number: var sin ="345 555 434"
+                <br>c. A person's bank account total: var bankTotal = 45.64;
+                <br>d. A person's age: var age = 6;
+                <br>e. A decision to play again: var playAgain = "yes";
+              </ol>
+            </ul>
+            <ul>5. How do you collect user input? Write the JS statement to collect the user’s response to a question.
+              <ol class="answer">var response = prompt(“Enter stuff here”);</ol>
+            </ul>
+            <ul>6. Identify two identifiers that cannot be used as a variable name. Indicate why.
+              <ol class="answer">var, if, else, prompt, Math, – because       you cannot use keywords as a variable name
+                <br> my num, #num – no special character such as spaces, #,/, * …
+                <br>2x – can’t start with a number x2 is fine
+                <br><br>should make sense and use camelCase
+              </ol>
+            </ul>
+            <ul>7. This script isn’t working. It always seems to output “no” – what is wrong with it? (min 2 errors) 
+              <ol class="answer"> The reason why the script is not working was because the code was missing the Number data type converter which meant that all answers would initialize as strings rather than the intended number inputs, other than that the if conditional statement had a curly bracket to close up the document.write parameter.
+              </ol>
+            </ul>
+            <ul>8. Write a program that will change a user entered number of minutes into hours and minutes. Example: if the user enters 128 min, the program will display 2 hours and 8 minutes.
+              <ol class="answer"> var fullMinutes = Number(prompt("Enter the number of minutes"));
+                <br> var hours = Math.floor(fullMinutes/60);
+                <br> var minutes = fullMinutes%60;
+                <br>document.write(fullMinutes + " is " + hours + " hours, and " + minutes + "minutes.");
+              </ol>
+            </ul>
+            <ul>9. Write the code necessary to pick a random integer between 12 and 22 inclusive.
+              <ol class="answer"> Math.floor(11*Math.random()+12) or Math.round(10*Math.random()+12)
+              </ol>
+            </ul>
+            <ul>Write the code necessary to pick a random integer between -5 and 2 inclusive.
+              <ol class="answer"> Math.floor(8*Math.random()-5) or Math.round(7*Math.random()-5)
+              </ol>
+            </ul>
+            <ul> 11. What is the outcome of: 
+              <ol class="answer"> a) 25 % 4 =1
+                <br> b) 25/4 =6.25 
+                <br> c) 14%2 =0 
+                <br> d) Number(6 * Math.random() +8) –random numbers between 8 up to 14 (not including 14)
+              </ol>
+            </ul>
+            <ul> 12. Write a program to calculate the roots of a quadratic equation. You will need to take in a, b and c. Determine if the equation has 1 root, 2 roots or no real roots. If it has real roots calculate and display the results.
+              <ol class="answer"> var a, b, c, D, r1, r2;
+                <br> a = prompt("Enter your a value");
+                <br> b = prompt("Enter your b value");
+                <br> c = prompt("Enter your c value");
+                <br> D = b*b -4*a*c;
+                <br> if (D==0) {
+                <br> r1 = -b/(2*a);
+                <br> document.write("One root: " + r1)
+                <br> } else if (D>0) {
+                <br> r1 = (-b + Math.sqrt(D)/(2*a))
+                <br> r2 = (-b - Math.sqrt(D)/(2*a))
+                <br> document.write("Two roots: " +r1 + " and " + r2);
+                <br>} else {
+                <br> document.write("No real roots");
+                <br>}
+              </ol>
+            </ul>
+            <ul>13. Write a program that will determine a person’s age based on their birthdate.
+              <ol class="answer"> const YEAR = 2021;
+              <br> const MONTH = 3;
+              <br> var age;
+              <br> var year = prompt("Enter year of birth");
+              <br> var month = prompt("Enter month of birth (1-12)");
+              <br> var day = prompt("Enter day of birth");
+              <br>
+              <br> if (MONTH == month) {
+              <br> if (DAY >= day) {
+              <br> age = YEAR - year;
+              <br> } else {
+              <br> age = YEAR - year -1; 
+              <br>}
+              <br>} else if (MONTH < month) {
+              <br> age = YEAR - year -1
+              <br> } else {
+              <br> age = YEAR - year;
+              <br> } alert("You are " +age + " year olds");
+              </ol>
+            </ul>
+          </td>
+          <td>
+            <center><h3>2012 Candian Computing Contest: Problems 1 & 2</h3></center>
+            <img src="CCCJ1.png">
+            <img src="CCCJ2.png">
+          </td>
+        </tr>
+        <tr>
+          <td>7. Functions and Forms</td>
+          <td>
+            <ul> A function is a <b>block of code</b> that performs a <b> specific task</b>. We have already made use of some built in functions such as alert, prompt, Math.floor and others. </ul>
+            <ul> Examlpe: function functionName(parameters){
+              <br> code to be executed
+              <br>}
+            </ul>
+            <ul> Data is given, or passed, to a function through <b>parameters</b>. A variable or value passed to a function is called an <b> argument </b>. </ul>
+            <ul> Example : function alert(message) {code to make a box pop up with a message} - In this function alert is the function name and message is the parameter of alert. If the parameter of message took the form of "Hey what is up?" - that would be considered as the argument. </ul>
+            <ul> In the math library we have many pre-built functions including Math.floor and Math.random - the usage of floor and random are functions that come from a class called Math (a storage unit almost). </ul>
+            <ul> For functions to be executed they need to be called, meaning that at the end of the aforementioned function you need call it by adding the function to an output type such as document.write(functionName()) or alert(functionName()). </ul>
+          </td>
+          <td>
+            <img src="7KC.png">
+          </td>
+        </tr>
+        <tr>
+          <td>8. Strings</td>
+          <td>
+            <p>Recall that a String is a variable-type that stores a sequence of characters. Javascript includes several built-in
+            functions for working with strings. The following is a list of some string functions available in JS. <br><br>
+            In Javascript, every character in a String can be referred to with an <i>index</i>, with the first character having an
+            index of 0. <b>For example</b>, in the String “ICS20”, the character ‘C’ would have an index of 1, and 'I' would have the index of 0.<br><br>
+            In addition, all String functions <b><i>return</i></b> a new string and <b><u>do not</u></b> modify the original variable. Formally, we
+          then say that Strings are <b><i>immutable</i></b>, meaning they cannot be changed directly through a function. 
+          </p>
+            <img src="strignsjS.png">
+            <img src="stirngsv2.png">
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9.For Loops</td>
+          <td>
+            <p>The <b>for</b> statement is a looping structure that executes a set of statements a fixed number of times. In computer
+            science, this is known as <u><i>iteration</i></u>. The <b>for</b> statement executes until a counter reaches an ending value. The <b>for</b>
+          statement takes the following form:
+            </p>
+            <p><center><img src="for_loop.png"></center><br>
+            There are 3 main parts of a <b>for</b> loop:
+            </p>
+            <p>
+              1. <span id="green"><b>Initialization</b></span> - the counter variable used to count the loop is set to an initial value. This can be set with a
+            value or a variable.<br><br>
+            2. <span id="red"><b>Boolean Expression</b></span> - controls the loop by testing the counter variable. If the expression is <i>true</i>, the loop
+            runs again, if the expression is <i>false</i>, the loops stops running.<br><br>
+            3. <span class="blue"><b>Modifier</b></span> - this statement changes the counter variable after the statements in the loop finish. <span class="blue">counter++</span>
+          has the same effect as <span class="blue">counter = counter + 1</span>.
+          </p>
+          <p><center><img src="stuf.png"></center></p>
+          <br>
+
+          <h4><b><u>INFINITE LOOPS</u></b></h4>
+          <p>The condition of a loop is used to determine when the loop should stop executing. A for loop continues until its condition
+          is false. What happens, though, if the condition never becomes false? The result is an infinite loop - one which continues
+          forever.<br>
+          A logic error can lead to an infinite loop. For example, the following statements create an infinite loop. Can you see why? <span class="blue"> PSSSST.... its cuz the initial value (i) is initially bigger than the boolean expression, making it true. The modifier makes the initial value go up by +1, meaning 'i' will always stay being bigger than 2 no matter how many times it loops.</span> 
+          </p>
+          <img src="eee.png">
+          <br>
+          
+          <h4><b><u>ACCUMULATOR PATTERN</u></b></h4>
+          <p>Sometimes when we are iterating through a sequence of numbers, it can be useful for us to count something. The
+          accumulator pattern allows us to keep a ‘running total’ as a loop runs. To do this, we must initialize a variable outside of
+          the loop that will store the sum. As the loop runs, we will increment that sum as needed. After the loop finishes, it will
+        store the result of our counting.<br>
+        Here is an example:</p>
+        <img src="www.png">
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10. While Loops</td>
+          <td>
+            <ul>The while statement is a looping structure that executes a set of statements while a boolean expression is true. If the expression is false, the loop is exited. The boolean expressions is checked before the statements in teh loop execute. The while sttement takes the following form:
+            </ul>
+            <center><img src="kcd.png"></center>
+
+            <ul> The do-while statement is a statement, except that the boolean expression is checked after the statements in the loop execute. Also, a semi-colon is included after the while statement in a do-while loop. The do-while statment takes the following form: 
+            </ul>
+            <center><img src="dcc.png"></center>
+
+            <ul> Example of while and do-while loops accomplising the same proram of creating 10 alerts displaying the numbers from 1 to 10
+            </ul>
+              <center><img src="adc.png"></center>
+            <ul> Variables must be declared before the loop is created, This is because any variable you create inside of the loop cannot be checked in the while condition.
+            </ul>
+            <center><img src="nowrk.png"></center>
+            
+            <br>
+            <br>
+            <ul><b>Infinite Loops</b></ul>
+            <ul>Infinite loops can be created in while and do-while loops as when a variable is initialized and the condition of the while will always be met from a non-changing variable to an incrmeentation or decremenatation that has no effect on the condition.</ul>
+            <center><img src="mdmd.png"></center>
+            
+            <br>
+            <br>
+            <ul><b>Sentinel Pattern</b></ul>
+            <ul>The sentinel pattern in computer science is used to determine when a loop will terminate (stop iterating). The sentinel value is a variable that is used to accomplish this. A certain value (true/false) will indicate the loop should continue to run. When the sentinel value changes, the loop will terminate. The sentinel value changes when the loop has accomplished the particular task it is being used for. 
+            </ul>
+            <center><img src="scs.png"></center>
+
+            <ul><b>Tracing A Loop</b></ul>
+            <ul>When using loops, a useful skill is to be able to loop as it runs. This means keep track of values elevant to the loop as they chang eto help undetrstand how the loop is working. Here is an example: 
+            </ul>
+            <center><img src="ffq.png"></center>
+            
+          </td>
+          <td>
+            <img src="8KC.png">
+            <img src="8KCPT2.png">
+            <img src="8KCPT3.png">
+          </td>
+        </tr>
+        <tr>
+          <td>11. JavaScript Review #2</td>
+          <td>
+            <ul> 1. Be able to use the String Functions. You do not have to memorize them, you can use the sheet on the test - however you must be able to use them and understand what they do. To practice, write the segment of code that will perform each task: 
+              <br>
+              <br>
+              <ol>a. Output the 2nd character of a word - so “ICS2O” would output “C”
+                <ol class="answer">var word = prompt("Enter a word and the program will output the second string");
+                  <br>document.write("Your second letter is: " +word.charAt(1));
+                </ol>
+              </ol>
+              <ol>b. Tell the user if the word has a “M” in it
+                <ol class="answer">var word = prompt("Enter a word and the program will indicate whether or not the word contains the letter M");
+                  <br>document.write("The result of the search is: " +word.includes("M"));
+                </ol>
+              </ol>
+              <ol>c. Output the number of characters in a sentence
+                <ol class="answer">var sentence = prompt("Enter a sentence and the program will indicate the amount of characters");
+                  <br>document.write("Your sentence contains: " +sentence.length +" words.");
+                </ol>
+              </ol>
+              <ol>d. Count the number of “M”s in a sentence
+                <ol class="answer">var sentence = prompt("Enter a sentence and the program will indicate the amount of characters");
+                  <br> count = 0;
+                  <br> for (i=0; i < sentence.length; i++;)
+                  <br> if (sentence.charAt(i) == "m" || sentence.charAt(i) == "M") {
+                  <br> count ++;
+                  <br>}
+                  <br>document.write("Your sentence contains: " +count +" Ms.");
+                </ol>
+              </ol>
+              <ol>e. Remove the first and last letter of a word --- so “apple” becomes “ppl”
+                <ol class="answer"> var word = prompt("Enter a word and the program will remove both the first and last letters!")
+                  <br> var newWord = word.substring(1,word.length-1);
+                  <br> document.write("Your new word with the first and last letter removed is: " +newWord;)
+                </ol>
+              </ol>
+              <ol>f. Replace the first and last letter of a word with a # --- so “apple” becomes “#ppl#”
+                <ol class="answer">var word = prompt("Enter a word and the program will replace the first and last letter with a #");
+                  <br>var newWord = "#" + word.substring(1, word.length-1) + "#";
+                  <br>document.write("Your new word with the #s is: " +newWord);
+                </ol>
+              </ol>
+              <br>
+            </ul>
+            <ul>2. Write a loop to output the following sequence of numbers: 
+              <br>
+              <br>
+              <ol>a. 5, 7, 9, 11,13, 15
+                <ol class="answer"> var numberSequence = " ";
+                <br> for(i=5; i <= 15; i=i+2;){
+                <br> numberSequence +=i + ",";
+                <br> }
+                <br> document.write("The number sequence is: " + numberSequence.substring(0,numberSequence.length-1));
+                </ol>
+              </ol>
+              <br>
+              <ol>b. 100, 95, 90, ...10, 5, 0
+                <ol class="answer"> var numberSequence = " ";
+                <br> for(i=100; i >= 0; i=i-5;){
+                <br> numberSequence +=i + ",";
+                <br> }
+                <br> document.write("The number sequence is: " + numberSequence.substring(0,numberSequence.length-1));
+                </ol>
+              </ol>
+              <br>
+              <ol>c. 3, 9, 27, 81, 243, 729
+                <ol class="answer"> var numberSequence = " ";
+                <br> for(i=3; i <= 729; i=i*3;){
+                <br> numberSequence +=i + ",";
+                <br> }
+                <br> document.write("The number sequence is: " + numberSequence.substring(0,numberSequence.length-1));
+                </ol>
+              </ol>
+              <br>
+            </ul>
+            <ul> 3. Write a loop that will continue to run until a user enters 0.
+              <ol class="answer"> var input;
+              <br> do {
+              <br> input = prompt("Enter any number and enter a 0 to exit the loop");
+              <br>} while (input != 0);
+              </ol>
+              <br>
+            </ul>
+            <ul>4. Write a function called “generateLetter” to generate a random capital letter. (In the Ascii code - Capital letters start with A=65).
+              <ol class="answer"> function generateLetter() {
+              <br> var letter = Math.floor(26*Math.random()+65);
+              <br> alert(String.fromCharCode(letter));
+              <br> }
+              <br> generateLetter();
+              </ol>
+            </ul>
+            <ul>5. Write a function called “generatePassword” that will call your function “generateLetter” 5 times to generate a random 5 character password.
+              <ol class="answer"> function generateLetter() {
+                  <br> var r = Math.floor(26*Math.random()+65);
+                  <br> return String.fromCharCode(r);
+                  <br> }
+                  <br>
+                  <br>function generatePassword(num){
+                  <br> var password ="";
+                  <br> for(x=1; x<=num; x++){
+                  <br>password+=generateLetter();
+                  <br>}
+                  <br>return password;
+                  <br>}
+                  <br> var myPassword = generatePassword(5);
+                  <br>console.log("Your new password is: " + myPassword);
+              </ol>
+            </ul>
+            <ul>6. Write a function called “checkPassword” that will determine if a user entered value matches the generated password.
+                <ol class="answer"> function generateLetter() {
+                  <br> var r = Math.floor(26*Math.random()+65);
+                  <br> return String.fromCharCode(r);
+                  <br> }
+                  <br>
+                  <br>function generatePassword(num){
+                  <br> var password ="";
+                  <br> for(x=1; x<=num; x++){
+                  <br>password+=generateLetter();
+                  <br>}
+                  <br>return password;
+                  <br>}
+                  <br> var myPassword = generatePassword(5);
+                  <br>console.log("Your new password is: " + myPassword);
+                  <br>function checkPassword(guess, password){
+                  <br>if(guess==password){
+                  <br>console.log("Password correct");
+                  <br>} else {
+                  <br>console.log("Password does not match");
+                  <br>}
+                  <br>}
+                  <br>var userPass = prompt("Enter your Password");
+                  <br>checkPassword(userPass, myPassword);
+                </ol>
+            </ul>
+            <ul> 7. What is a parameter?
+              <ol class="answer"> A parameter is what a function needs to run - it is useful to pass in the values it needs in the function call. </ol>
+            </ul>
+            <ul> 8. What does the return statement do? Can a function have multiple return statements?
+              <ol class="answer"> A return statement sends info back to the calling function/statement. A function can have mulitple returns however only one of them will be executed.</ol>
+            </ul>
+            <ul>9. Write a function that takes in a word and a character and returns a new word that is the character repeated the same number of times as the length of the word. Example calls: createWord(“hello”, “&”) would create “&&&&&” or createWord(“cat”, “-”) would create “---”.
+              <ol class="answer"> function createWord(word, char){
+                <br>var newWord ="";
+                <br>for(i=0; i < word.length; i ++){
+                <br>newWord +=char;
+                <br>}
+                <br>return newWord;
+                <br>}
+                <br>console.log("Your new word is: " + createWord(prompt("Enter a word"), prompt("Enter a character")));
+              </ol>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12. Arrays</td>
+          <td>
+            <ul>A variable array stores a set of variables that each have the same name and are all of the same type. Each variable of an array is called a member or element, and is identified by a number called the index. Arrays are visualized as so: 
+              <table border=1>
+                <tr>
+                  <th>Index</th>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th>Name (Element)</th>
+                  <td>John</td>
+                  <td>James</td>
+                  <td>Jacob</td>
+                  <td>Joseph</td>
+                  <td>Jonah</td>
+                  <td>Johannes</td>
+                </tr>
+              </table>
+            </ul>
+            <ul> By  creating a variable you can create a new array with amounts of elements placed: var students = new Array(6) - would create 6 elements in students and therefore you could set an index to the variable and enter in string values. For example student at index 0 or students[0]="Ian".</ul>
+            <ul>By the same logic you could output a certain element or the whole array (using the .length substring) by calling it.
+            </ul>
+            <ul> For loops can be utilized in a manner so that set variable arrays can take in input through prompts until the index count is met - this same input can be displayed in outputs on the webpage using document.write: 
+              <br>
+              <center><img src="loopeduparray.png"></center>
+            </ul>
+          </td>
+          <td>
+            <img src="ArrayKCPT1.png">
+            <img src="ArraysKCPT2.png">
+          </td>
+        </tr>
+      </table>
+    <script src="script.js"></script>
+  </body>
+</html>

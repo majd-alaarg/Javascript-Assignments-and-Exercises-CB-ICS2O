@@ -1,0 +1,15 @@
+#prizePic {
+  width: 100%;
+}
+body{
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 4vw;
+  font-family: 'Poppins', sans-serif;
+  color: #0B7189;
+}
+.box {
+  margin-top: 5px;
+  background: linear-gradient(90deg,#C7EAE4, #A7E8BD, #FCBCB8, #FCBCB8, #FFD972);
+}

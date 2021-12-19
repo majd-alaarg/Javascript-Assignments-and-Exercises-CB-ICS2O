@@ -1,0 +1,14 @@
+#everything {
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  color: #1A1B41;
+}
+button {
+  border-radius: 12px;
+  background-color: #C2E7DA;
+}
+.total {
+  text-decoration: #8D6A9F underline;
+  font-weight: bold;
+}

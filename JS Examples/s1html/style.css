@@ -1,0 +1,36 @@
+body {
+  margin-top: 10px;
+  background-color: #F0F0C9;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: #6E0E0A;
+}
+ul {
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #124E78;
+}
+#grades {
+  margin-top: 100px;
+  width: 450px;
+  height: 350px;
+}
+li {
+  color: #F2BB05;
+  font-family: 'Poppins', sans-serif;
+  float: center;
+  font-size: 45px; 
+}
+#circle {
+  margin-top: 200px;
+  width: 250px;
+  height: 250px;
+  -webkit-border-radius: 125px;
+  -moz-border-radius: 125px;
+  border-radius: 125px;
+  background: #124E78;
+}

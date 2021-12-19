@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>In Class Assignment | JavaScript Final Evaluation - Williams Thottungal</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		* {
+			background-color: #92B4F4;
+		}
+
+		button {
+			border-radius: 50px;
+			background-color: #CFDEE7;
+		}
+
+		input {
+			background-color: #CFDEE7;
+		}
+
+	</style>
+</head>
+
+<body>
+	<script>
+		//one big function to encase all sub-functions to keep vars local and reusable - plus I was running out of time
+		function bridgeWeight() {
+
+			//Part 1
+			var bridge = document.getElementById("string").value; // getting user input and storing it as bridge
+			var countP = 0; //initializing count variables for each item
+			var countS = 0;
+			var countL = 0;
+
+			//amount of vechicles valid comparing against invalid entries (Lvl 4+)
+			var i = 0;
+			var validStringsCount = 0; // initalziing 
+			var invalidString = "";
+			var invalidStringsCount = 0;
+			var validStrings = ['P', 'S', 'L']; // an array with the valid letters
+			if (bridge.length == 0) {
+				alert("Enter a valid value"); // for non-entries with zero characters
+			} else {
+				for (i = 0; i < bridge.length; i++) {
+					if (validStrings.includes(bridge.charAt(i))) {
+						validStringsCount++; // incrementation for valid strings
+					} else {
+						if (invalidStringsCount == 0) {
+							invalidString = bridge.charAt(i);
+						} else {
+							invalidString = invalidString + ", " + bridge.charAt(i);
+						}
+						invalidStringsCount++; //through the loop if index does not contain the leters from the array invalid string count increases
+					}
+				}
+			}
+			validString = bridge.length - invalidStringsCount; // equation to substract the total length of bridge string and invalid letters to find valid entries
+			document.getElementById("validEntries").innerHTML = "You entered " + validString + " bridge items.";
+
+			//finding count of each item
+			for (i = 0; i < bridge.length; i++) { // calculating the occurence of each item through for loop
+				if (bridge.charAt(i) == "P") {
+					countP++;
+				} else if (bridge.charAt(i) == "S") {
+					countS++;
+				} else if (bridge.charAt(i) == "L") {
+					countL++;
+				}
+			}
+
+			//finding/tabulating Percentage --(dividing the total amount of each object by valid strings, then multiplying by 100 for percent conversion) - (Lvl 4+)
+			var percentageofP = document.getElementById("pPerct").innerHTML = (countP / validString) * 100 + "%";
+			var percentageofS = document.getElementById("sPerct").innerHTML = (countS / validString) * 100 + "%";
+			var percentageofL = document.getElementById("lPerct").innerHTML = (countL / validString) * 100 + "%";
+
+			//tabulating count into table - taking the results of the looped count 
+			document.getElementById("pCount").innerHTML = countP;
+			document.getElementById("sCount").innerHTML = countS;
+			document.getElementById("lCount").innerHTML = countL;
+
+			//finding amount of cars (adding the small cars and large cars from past loop)
+			var totalCars = countS + countL;
+			document.getElementById("numofVechicles").innerHTML = "\n There are " + totalCars + " cars total on the bridge.";
+
+			//finding percentage of large cars in total amount of cars for (Lvl 4+ condition)
+			var largecarPercent = (countL / totalCars) * 100;
+
+			//finding total weight on bridge
+			var sum = 0;
+			for (i = 0; i < bridge.length; i++) {
+				if (bridge.charAt(i) == "P") { // if it contains said value/item add the weight to sum
+					sum += 80;
+				} else if (bridge.charAt(i) == "S") {
+					sum += 2000;
+				} else if (bridge.charAt(i) == "L") {
+					sum += 36000;
+				}
+			}
+			document.getElementById("totalWeight").innerHTML = "\n The total weight on the bridge is: " + sum + " kg.";
+
+			//finding average weight on the bridge using sum from past block as well as valid string count from the beginning 
+			var avg = sum / validString;
+			document.getElementById("avgWeight").innerHTML = "\n The average weight on the bridge is: " + avg + " kg.";
+
+			//Part 2 - User Input Verification
+			var weightCapacity = document.getElementById("weight").value; // getting user inputs for capacitys and limits
+			var maxVehicles = document.getElementById("max").value;
+
+			if (sum <= weightCapacity && totalCars < maxVehicles) { // sum has to be less than or equal to the weight capacity entered while at the same time having a less amount of total cars to the max amount
+				document.getElementById("verificationStatus").innerHTML = "\n The data meets the weight capacity and does not exceed the maximum num of vehicles therefore this bridge PASSES the bridge verification.";
+			} else if (sum < weightCapacity && totalCars != maxVehicles && largecarPercent < 10) { // (Lvl 4+) - another condition check for PASS if the percentage of large cars within the total cars is less than 10 wile the total weight is less than the inputed capacity - it passes the bridge verification
+				document.getElementById("verificationStatus").innerHTML = "\n The data meets the weight capacity and does not exceed the maximum num of vehicles therefore this bridge PASSES the bridge verification.";
+			} else {
+				document.getElementById("verificationStatus").innerHTML = "\n The data exceeds the weight capacity and exceeds the maximum number of vehicles therefore this bridge FAILS the bridge verification.";
+			}
+		}
+
+	</script>
+
+	<h1>
+		<center>Bridge Census</center>
+	</h1>
+	<b>Enter a string of Objects:</b><br>
+	<input type="text" id="string"><br><br>
+	<b>Enter Weight Capacity:</b><br>
+	<input type="text" id="weight"><br><br>
+	<b>Enter Maximum Number of Vehicles Allowed:</b><br>
+	<input type="text" id="max"><br><br>
+	<button onclick="bridgeWeight()">Calculate</button>
+	<br>
+	<br>
+	<h1>
+		<center>Bridge Report</center>
+	</h1>
+	<table border=1>
+		<tr>
+			<th>Amount of Valid Entries</th>
+			<td id="validEntries"></td>
+		</tr>
+		<tr>
+			<th>Amount of Vechicles on the Bridge</th>
+			<td id="numofVechicles"></td>
+		</tr>
+		<tr>
+			<th>Total Weight of the Vechicles on the Bridge</th>
+			<td id="totalWeight"></td>
+		</tr>
+		<tr>
+			<th>Average Weight of the Vechicles on the Bridge</th>
+			<td id="avgWeight"></td>
+		</tr>
+		<tr>
+			<th>Bridge Verification Status</th>
+			<td id="verificationStatus"></td>
+		</tr>
+		<tr>
+	</table>
+	<br>
+	<br>
+	<h1>
+		<center>Bridge Distribution Breakdown</center>
+	</h1>
+	<table border=1>
+		<tr>
+			<th>Object</th>
+			<td>Person</td>
+			<td>Small Car</td>
+			<td>Large Car</td>
+		</tr>
+		<tr>
+			<th>Count</th>
+			<td id="pCount"></td>
+			<td id="sCount"></td>
+			<td id="lCount"></td>
+		</tr>
+		<tr>
+			<th>Percentage</th>
+			<td id="pPerct"></td>
+			<td id="sPerct"></td>
+			<td id="lPerct"></td>
+		</tr>
+	</table>
+</body>
+
+</html>

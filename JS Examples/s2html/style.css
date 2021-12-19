@@ -1,0 +1,15 @@
+*{
+  background-image: url("8ball.png");
+  background-repeat: no-repeat;
+  background-size: 750px 750px;
+  align-content: center;
+}
+body {
+  font-size: 24px;
+  width: 150px;
+  margin-top: 350px;
+  margin-left: 300px;
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+}

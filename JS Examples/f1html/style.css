@@ -1,0 +1,59 @@
+body {
+  overflow: hidden;
+}
+#space {
+  color: #907AD6;
+}
+#centerText {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Poppins', sans serif;
+  font-size: 8vh;
+  color: #DABFFF;
+}
+#userInput {
+  font-size: 3vw;
+  font-weight: 600;
+  width: 50vw;
+  border: 5px solid #907AD6;
+  border-radius: 10px;
+  background: #DABFFF;
+}
+#userButton {
+  text-align: center;
+  border: 5px solid #2C2A4A;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  padding: 6px;
+  text-decoration: none;
+  background: #DABFFF; 
+}
+#userButton:visited:hover {
+  color: #2C2A4A;
+}
+#userButton:hover {
+  color: #2C2A4A;
+}
+#userButton:visited{
+  color: black;
+}
+#valign {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#bg {
+  z-index: -1;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(1px) brightness(0.3);
+}
+#outputText {
+  color: #DABFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 5vh;
+}

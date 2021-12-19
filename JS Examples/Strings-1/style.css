@@ -1,0 +1,26 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2B2D42;
+}
+h1 {
+  color: #F7F7F9;
+  text-align: center;
+}
+p {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+#box1, #box2 {
+  color: white;
+  border-color: #F7F7F9;
+}
+button {
+  valign: center;
+  background-color: #F7F7F9;
+  font-weight: bold;
+  font-size: 18px;
+  color: #E86A92;
+  border-color: #41E2BA;
+  border-radius: 20px;
+}
